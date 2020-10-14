@@ -975,7 +975,7 @@ movies[movies['movieId'].isin(bottom10movies)]
 
 After that, we need to create the User Item Matrix, this is a matrix with all the movies in the dataset as columns and all the users as rows, so every element inside the matrix represents what is the evaluation a user has made for a particular movie. In the matrix, a column (specific movie) will contain all the evaluations the users have made for that movie meanwhile every row will contain all the ratings made from the same user.
 
-<img src="images/uim.png" alt="Figure 1" style="width: 500px;"/><p style="text-align:center;font-size: 11px;">User Item Matrix</p>
+<img src="images/uim.PNG" alt="Figure 1" style="width: 500px;"/><p style="text-align:center;font-size: 11px;">User Item Matrix</p>
 
 For that, we start by selecting only the useful information from the ratings dataset ('userId', 'movieId', 'rating') and then use a pivot table to define users as rows, movies as columns and the ratings as values of the matrix. Due to the unseen movies, lots of the values will be presented as 'NaN', these 'NaN' values will be replaced by 0 to represent unseen movies since the scale of evaluation minimum value is 0.5.
 
